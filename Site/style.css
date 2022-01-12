@@ -1,0 +1,65 @@
+#map {
+    height: 100%;
+  }
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(/images/Parygin.jpg);
+    background-size: 100% 100%;
+}
+
+#tableWindow{
+  position: absolute; /* Абсолютное позиционирование */
+  left: 15px; /* Положение от нижнего края */
+  bottom: 15px; /* Положение от правого края */  
+  z-index:100;
+}
+
+.table_country {
+  border-collapse: collapse;
+  border-left: 3px solid #F79361;
+  border-right: 3px solid #F79361;
+  border-bottom: 3px solid #F79361;
+  font-family: "Lucida Grande", sans-serif;
+  background: white;
+ }
+.table_country caption {
+  background: #F79361; 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 2px  4px 0 rgba(0,0,0,.3);
+  color: white;
+  font-family: "Roboto Slab",serif;
+  font-style: normal;
+  font-size: 26px;
+  text-align: center;
+  margin: 0;
+}
+.table_country td, .table_country th {
+  padding: 10px;
+}
+.table_country th {
+  text-align: left;
+  font-size: 18px;
+}
+.table_country tr:nth-child(2n) {
+  background: #E5E5E5;
+}
+.table_country td:last-of-type {
+  text-align: center;
+}
+.table_country button {
+  display: inline-block;
+  padding: 5px 10px;
+  box-shadow: 2px 2px 0 0 #a22800;
+  position: relative;
+}
+.table_country button:hover {
+  box-shadow: none;
+  top: 2px;
+  left: 2px;
+}

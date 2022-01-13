@@ -1,6 +1,5 @@
 import csv
 import pathlib
-import pymongo
 import os
 
 ways_data = {}
@@ -33,7 +32,6 @@ def main():
         next(reader, None)  # skip the headers
         for row in reader:
             ways_data[int(row[0])]['area'] = float(row[1])
-            ways_data[int(row[0])]['residents'] = None
 
     csv_path = fr'{str(dir_path)}/residents'
     with open(fr'{csv_path}/{csv_file}', encoding='utf-8') as file:

@@ -51,14 +51,6 @@ def main():
             writer.writerow(ways_data[way_id].values())
     print('Write success')
 
-    # write to mongoDB
-    connection = 'mongodb+srv://ScorpionVSTU:VsTuBoY@scorpioncluster.kb9vl.mongodb.net/' \
-                 'myFirstDatabase?retryWrites=true&w=majority'
-
-    client = pymongo.MongoClient(connection)
-    collection = client.SpprDb[csv_file[:-4]]
-    collection.insert_many(ways_data.values())
-
 
 if __name__ == '__main__':
     main()
